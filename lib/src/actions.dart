@@ -98,7 +98,8 @@ class CustomSlidableAction extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             padding: padding,
             backgroundColor: backgroundColor,
-            disabledForegroundColor: effectiveForegroundColor.withOpacity(0.38),
+            disabledForegroundColor:
+                effectiveForegroundColor.withValues(alpha: 0.38),
             foregroundColor: effectiveForegroundColor,
             shape: RoundedRectangleBorder(
               borderRadius: borderRadius,
@@ -182,7 +183,7 @@ class SlidableAction extends StatelessWidget {
 
     if (icon != null) {
       children.add(
-        Icon(icon),
+        Icon(icon, color: foregroundColor),
       );
     }
 
